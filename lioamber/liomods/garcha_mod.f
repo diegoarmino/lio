@@ -169,6 +169,10 @@ c      parameter rmintsol=16.0D0
       integer :: n_min_steeps !number of optimization steps
       integer :: charge
       logical :: lineal_search !enable lineal search
+! Radial part of the DFT integrals grid. gridrpm is a parameter (integer) that
+! that multiplies the number of radial points in the grid in order to increase
+! numerical accuracy.
+      integer :: gridrpm
 
 
 !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%!

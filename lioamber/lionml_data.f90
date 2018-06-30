@@ -20,7 +20,7 @@ module lionml_data
                                  lowdin, mulliken, print_coeffs, number_restr, &
                                  Dbug, steep, Force_cut, Energy_cut, charge,   &
                                  minimzation_steep, n_min_steeps, n_points,    &
-                                 lineal_search, timers, IGRID, IGRID2
+                                 lineal_search, timers, IGRID, IGRID2,gridrpm
    use dftb_data         , only: dftb_calc, MTB, alfaTB, betaTB, gammaTB,      &
                                  Vbias_TB, end_bTB, start_tdtb, end_tdtb,      &
                                  TBsave, TBload
@@ -89,7 +89,7 @@ module lionml_data
                   ! Variables for GPU options.
                   little_cube_size, max_function_exponent, free_global_memory, &
                   min_points_per_cube, assign_all_functions, sphere_radius,    &
-                  remove_zero_weights, energy_all_iterations,                  &
+                  remove_zero_weights, energy_all_iterations,gridrpm           &
                   ! Variables for Transport
                   transport_calc, generate_rho0, gate_field,                   &
                   save_charge_freq, driving_rate, Pop_Drive,                   &
@@ -133,7 +133,7 @@ module lionml_data
                           cube_sqrt_orb
       ! GPU Options
       double precision :: free_global_memory, little_cube_size, sphere_radius
-      integer          :: min_points_per_cube, max_function_exponent
+      integer          :: min_points_per_cube, max_function_exponent, gridrpm
       logical          :: assign_all_functions, energy_all_iterations,         &
                           remove_zero_weights
       ! Transport and DFTB
